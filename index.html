@@ -19,6 +19,12 @@
     aside{font-size:0.95rem;color:var(--muted)}
     footer{font-size:0.9rem;color:var(--muted);text-align:center;margin:28px 0}
     ul{padding-left:1.1rem}
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+    .gallery figure{margin:0;border-radius:8px;overflow:hidden}
+    .gallery img{width:100%;height:auto;display:block;object-fit:cover}
+    @media(min-width:720px){.gallery{grid-template-columns:repeat(3,1fr)}}
+    .figcaption{padding:8px;background:#fafafa;font-size:0.9rem;color:var(--muted)}
   </style>
 </head>
 <body>
@@ -61,7 +67,23 @@
 
       <section class="card" id="cosa-vedere">
         <h2>Cosa vedere</h2>
-        <ul>
+        <p>Alcuni scatti e luoghi rappresentativi della zona:</p>
+        <div class="gallery" aria-hidden="false">
+          <figure>
+            <img src="https://picsum.photos/seed/poggibonsi1/800/500" alt="Panorama collinare vicino a Poggibonsi">
+            <div class="figcaption">Panorama della campagna valdelsa</div>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/seed/poggibonsi2/800/500" alt="Centro storico di Poggibonsi">
+            <div class="figcaption">Scorcio del centro storico</div>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/seed/poggibonsi3/800/500" alt="Architettura storica e torri">
+            <div class="figcaption">Architettura e torri storiche</div>
+          </figure>
+        </div>
+
+        <ul style="margin-top:12px">
           <li><strong>Colle di Buonfiglio</strong> e centro storico: scorci medievali e chiese locali.</li>
           <li><strong>Fortezza</strong> e mura storiche: resti di strutture difensive.</li>
           <li><strong>Museo Archeologico</strong>: reperti locali che raccontano la storia del territorio.</li>
